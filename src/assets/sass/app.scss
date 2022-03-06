@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap";
+
+.products-page{
+    display: flex;
+    .product-box{
+        padding: 15px;
+
+        .product-img{
+            display: flex;
+            align-items: center;
+            img{
+                margin:auto;
+                width:200px;
+            }
+        }
+    }
+}
+.styles_kPagination__1qVvD .styles_kPaginationListItemVertical__q-2s5{
+    flex-wrap:wrap;
+    flex-direction: row !important;
+}
