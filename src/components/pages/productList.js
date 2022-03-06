@@ -35,14 +35,8 @@ function ProductList() {
 
       })
       .then((res) => {
-        console.warn("res.data.message: ", res.data);
-        if (res.data) {
-          console.warn("res: ", res);
           console.warn("res.data.message: ", res.data);
-        }
-        else {
-          console.warn("res.data.message: ", res.data);
-        }
+     
       }).catch(
         function (error) {
           console.log('Show error notification!')
@@ -72,9 +66,7 @@ function ProductList() {
               <div className='product-title'>
                   <h3>{item.title}</h3>
               </div>
-              <div className='product-body'>
-              <p dangerouslySetInnerHTML={{__html: item.body_html}} />
-              </div>
+             
             </div>
             </Link>
         </div>   
