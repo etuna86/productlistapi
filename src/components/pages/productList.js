@@ -17,7 +17,6 @@ function ProductList() {
   const [productdata, setProductdata] = useState([]);
 
   useEffect(() => {
-    console.warn('data: ', jsonData.products);
     setProductdata(jsonData.products);
   }, []);
 

@@ -13,7 +13,7 @@ module.exports = {
     historyApiFallback: true,
       //allowedHosts: ['https://teknasyon.myshopify.com'],
       https: true,
-      public: 'https://getproductsapi.my:8080',
+      //public: 'https://getproductsapi.my:8080',
       disableHostCheck: true,
       //hot: true,
       //watch: true,

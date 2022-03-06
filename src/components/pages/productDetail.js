@@ -10,13 +10,13 @@ import jsonData from '../../data.json';
 function ProductList(props) {
   const location = useLocation();
   const [productId, setProductId] = useState(0);
-  console.warn("props:", location.state.productid);
   const [productData, setProductData] = useState([]);
+  const [productImage, setProductImage] = useState([]);
 
   useEffect(() => {
     setProductId(location.state.productId);
     setProductData(jsonData.products.filter(product => product.id == location.state.productid)[0]);
-    console.warn("props123:", productData);
+    setProductImage(jsonData.products.filter(product => product.id == location.state.productid)[0].image);
   }, []);
 
   return (
@@ -27,6 +27,7 @@ function ProductList(props) {
             <div className='col-md-6' >
               <div className='product-box'>
                 <div className='product-img'>
+                  <img src={productImage.src} />
                 </div>
                 <div className='product-title'>
                   <h3>{productData.title}</h3>
