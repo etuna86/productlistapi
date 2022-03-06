@@ -35,7 +35,7 @@ function ProductList() {
       })
       .then((res) => {
           console.warn("res.data.message: ", res.data);
-     
+          //setProductdata(res.data.products);
       }).catch(
         function (error) {
           console.log('Show error notification!')
