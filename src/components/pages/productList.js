@@ -24,11 +24,6 @@ function ProductList() {
     axios
       .get("https://teknasyon.myshopify.com/admin/api/2022-01/products.json", {
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': '*',
-          'Access-Control-Allow-Credentials': true,
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Methods': "OPTIONS, DELETE, POST, GET, PATCH, PUT",
           'X-Shopify-Access-Token': AccessToken
         }
 
@@ -65,7 +60,10 @@ function ProductList() {
               <div className='product-title'>
                   <h3>{item.title}</h3>
               </div>
-             
+              <div className='product-price'>
+                  <span>Price: </span>
+                  <small>{item.variants[0].price}</small>
+              </div>
             </div>
             </Link>
         </div>   

@@ -12,11 +12,13 @@ function ProductList(props) {
   const [productId, setProductId] = useState(0);
   const [productData, setProductData] = useState([]);
   const [productImage, setProductImage] = useState([]);
+  const [productPrice, setProductPrice] = useState([]);
 
   useEffect(() => {
     setProductId(location.state.productId);
     setProductData(jsonData.products.filter(product => product.id == location.state.productid)[0]);
     setProductImage(jsonData.products.filter(product => product.id == location.state.productid)[0].image);
+    setProductPrice(jsonData.products.filter(product => product.id == location.state.productid)[0].variants[0]);
   }, []);
 
   return (
@@ -32,9 +34,14 @@ function ProductList(props) {
                 <div className='product-title'>
                   <h3>{productData.title}</h3>
                 </div>
+                <div className='product-price'>
+                  <span>Price: </span>
+                  <small>{productPrice.price}</small>
+              </div>
                 <div className='product-body'>
                   <p dangerouslySetInnerHTML={{ __html: productData.body_html }} />
                 </div>
+                
               </div>
             </div>
           </Row>
